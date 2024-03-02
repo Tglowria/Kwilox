@@ -60,7 +60,6 @@ const updateDrinks = async (req, res) => {
 
     res.status(200).json({
       message: "Drink Details Updated Successfully",
-      updatedDrinks,
     });
   } catch (error) {
     res.status(500).json({ error, message: "Error Updating Drink Details" });
