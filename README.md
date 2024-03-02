@@ -1,6 +1,6 @@
 # My First Challenge
 
-## Kwilox
+## Kwilox Relaxation Center
 _____
 -----
 
@@ -41,7 +41,7 @@ npm start
 ____
 
 #### Postman Documetation
-[Postman link](https://documenter.getpostman.com/view/21992639/Uze1uiZp)
+[Postman link](https://documenter.getpostman.com/view/32396301/2sA2xb6vHP)
 -------
 
 I’m currently learning **back end web development** and a student at **At GRAZAC ACADEMY**
