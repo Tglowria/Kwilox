@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Drinks = require("../models/admin.models");
 
+
+const allDrinks = [];
+
+
 const saveDrinks = async (req, res) => {
   try {
     const { drinkName, manufacturerCompany, expiryDate, quantityAvailable } =
@@ -83,4 +87,19 @@ const deleteDrinks = async (req, res) => {
   }
 };
 
-module.exports = { saveDrinks, updateDrinks, deleteDrinks };
+const getAllDrinks = async (req, res) => {
+  try {
+    const allDrinks = await Drinks.find();
+    return res.status(200).json({
+      message: "All Drinks Fetched Successfully",
+      data: allDrinks,
+    });
+  } catch (err) {
+    console.error(err);
+    return res
+      .status(500)
+      .json({ message: "Error fetching all Drinks", err });
+  }
+};
+
+module.exports = { saveDrinks, updateDrinks, deleteDrinks, getAllDrinks };
