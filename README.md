@@ -35,8 +35,8 @@ This can be seen in the package.json folder
 _____
 -----
 ### To Start Project 
-npm i
-
+Clone the project repository: git clone https://github.com/Tglowria/Kwilox.git
+npm install
 npm start
 ____
 
