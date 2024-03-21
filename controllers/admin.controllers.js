@@ -5,37 +5,37 @@ const Drinks = require("../models/admin.models");
 const allDrinks = [];
 
 
-const saveDrinks = async (req, res) => {
-  try {
-    const { drinkName, manufacturerCompany, expiryDate, quantityAvailable } =
-      req.body;
-    if (
-      !drinkName ||
-      !manufacturerCompany ||
-      !expiryDate ||
-      !quantityAvailable
-    ) {
-      return res.status(400).json({
-        message: "Please fill all fields",
-      });
-    }
+// const saveDrinks = async (req, res) => {
+//   try {
+//     const { drinkName, manufacturerCompany, expiryDate, quantityAvailable } =
+//       req.body;
+//     if (
+//       !drinkName ||
+//       !manufacturerCompany ||
+//       !expiryDate ||
+//       !quantityAvailable
+//     ) {
+//       return res.status(400).json({
+//         message: "Please fill all fields",
+//       });
+//     }
 
-    const newDrinks = new Drinks({
-      drinkName,
-      manufacturerCompany,
-      expiryDate,
-      quantityAvailable,
-    });
+//     const newDrinks = new Drinks({
+//       drinkName,
+//       manufacturerCompany,
+//       expiryDate,
+//       quantityAvailable,
+//     });
 
-    await newDrinks.save();
+//     await newDrinks.save();
 
-    res.status(200).json({
-      message: "Drink Details Added Successfully",
-    });
-  } catch (error) {
-    res.status(500).json({ error, message: "Error Saving Drink Details" });
-  }
-};
+//     res.status(200).json({
+//       message: "Drink Details Added Successfully",
+//     });
+//   } catch (error) {
+//     res.status(500).json({ error, message: "Error Saving Drink Details" });
+//   }
+// };
 
 const updateDrinks = async (req, res) => {
   try {
